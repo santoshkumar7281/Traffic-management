@@ -1,0 +1,406 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Management System</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚦</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-0{bottom:0px}.left-1\/2{left:50%}.right-0{right:0px}.right-2{right:0.5rem}.top-0{top:0px}.top-1\/2{top:50%}.top-2{top:0.5rem}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mr-3{margin-right:0.75rem}.mr-4{margin-right:1rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.h-1{height:0.25rem}.h-2{height:0.5rem}.h-24{height:6rem}.h-3\/4{height:75%}.h-32{height:8rem}.h-40{height:10rem}.h-48{height:12rem}.h-64{height:16rem}.h-96{height:24rem}.h-full{height:100%}.w-1{width:0.25rem}.w-24{width:6rem}.w-32{width:8rem}.w-8{width:2rem}.w-full{width:100%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-t{border-top-left-radius:0.25rem;border-top-right-radius:0.25rem}.border{border-width:1px}.border-8{border-width:8px}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.border-t-transparent{border-top-color:transparent}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.opacity-20{opacity:0.2}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-500{transition-duration:500ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head><script src="https://codesandbox.io/p/preview-protocol.js" defer="" async=""></script>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-traffic-light text-2xl mr-3"></i>
+                    <span class="text-xl font-semibold">Smart Traffic Management</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="hover:bg-blue-700 px-4 py-2 rounded-lg transition" fdprocessedid="pdwig">Dashboard</button>
+                    <button class="hover:bg-blue-700 px-4 py-2 rounded-lg transition" fdprocessedid="9o0xas">Analytics</button>
+                    <button class="hover:bg-blue-700 px-4 py-2 rounded-lg transition" fdprocessedid="x69gf8">Settings</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-8">
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center">
+                    <i class="fas fa-car text-blue-600 text-3xl mr-4"></i>
+                    <div>
+                        <h3 class="text-gray-500 text-sm">Current Traffic</h3>
+                        <p class="text-2xl font-semibold" data-stat="current-traffic">721 vehicles</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center">
+                    <i class="fas fa-clock text-green-600 text-3xl mr-4"></i>
+                    <div>
+                        <h3 class="text-gray-500 text-sm">Average Wait Time</h3>
+                        <p class="text-2xl font-semibold" data-stat="wait-time">2.3 mins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center">
+                    <i class="fas fa-gas-pump text-orange-600 text-3xl mr-4"></i>
+                    <div>
+                        <h3 class="text-gray-500 text-sm">Fuel Saved</h3>
+                        <p class="text-2xl font-semibold" data-stat="fuel-saved">103 L/hour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center">
+                    <i class="fas fa-leaf text-green-600 text-3xl mr-4"></i>
+                    <div>
+                        <h3 class="text-gray-500 text-sm">Emissions Reduced</h3>
+                        <p class="text-2xl font-semibold" data-stat="emissions">43 kg CO₂</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traffic Control Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Intersection Map -->
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Intersection Map</h2>
+                <div class="relative bg-gray-200 h-96 rounded-lg overflow-hidden">
+                    <!-- Road Layout -->
+                    <div class="absolute inset-0">
+                        <!-- Vertical Road -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-24 bg-gray-700">
+                            <!-- Road markings -->
+                            <div class="h-full w-1 bg-yellow-400 mx-auto"></div>
+                        </div>
+                        <!-- Horizontal Road -->
+                        <div class="absolute top-1/2 transform -translate-y-1/2 w-full h-24 bg-gray-700">
+                            <!-- Road markings -->
+                            <div class="w-full h-1 bg-yellow-400 my-auto"></div>
+                        </div>
+                    </div>
+
+                    <!-- Traffic Lights -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="w-32 h-32 bg-red-500 rounded-lg flex items-center justify-center transition-colors duration-500" style="background-color: rgb(239, 68, 68);">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-traffic-light text-4xl mb-2"></i>
+                                    <p class="text-sm font-medium">North Signal</p>
+                                </div>
+                            </div>
+                            <div class="w-32 h-32 bg-red-500 rounded-lg flex items-center justify-center transition-colors duration-500" style="background-color: rgb(34, 197, 94);">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-traffic-light text-4xl mb-2"></i>
+                                    <p class="text-sm font-medium">East Signal</p>
+                                </div>
+                            </div>
+                            <div class="w-32 h-32 bg-red-500 rounded-lg flex items-center justify-center transition-colors duration-500" style="background-color: rgb(239, 68, 68);">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-traffic-light text-4xl mb-2"></i>
+                                    <p class="text-sm font-medium">South Signal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animated Cars -->
+                    <div class="car-animation-north absolute top-0 left-1/2 transform -translate-x-1/2">
+                        <i class="fas fa-car text-blue-500 text-2xl"></i>
+                    </div>
+                    <div class="car-animation-east absolute top-1/2 right-0 transform -translate-y-1/2 rotate-90">
+                        <i class="fas fa-car text-blue-500 text-2xl"></i>
+                    </div>
+                    <div class="car-animation-south absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-180">
+                        <i class="fas fa-car text-blue-500 text-2xl"></i>
+                    </div>
+
+                    <style>
+                        @keyframes driveNorth {
+                            from { transform: translateY(100vh) translateX(-50%); }
+                            to { transform: translateY(-50px) translateX(-50%); }
+                        }
+                        @keyframes driveEast {
+                            from { transform: translateX(-100%) translateY(-50%) rotate(90deg); }
+                            to { transform: translateX(100%) translateY(-50%) rotate(90deg); }
+                        }
+                        @keyframes driveSouth {
+                            from { transform: translateY(-50px) translateX(-50%) rotate(180deg); }
+                            to { transform: translateY(100vh) translateX(-50%) rotate(180deg); }
+                        }
+                        .car-animation-north {
+                            animation: driveNorth 4s linear infinite;
+                        }
+                        .car-animation-east {
+                            animation: driveEast 4s linear infinite;
+                        }
+                        .car-animation-south {
+                            animation: driveSouth 4s linear infinite;
+                        }
+                    </style>
+                </div>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Control Panel</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-medium mb-2">Traffic Mode</h3>
+                        <select class="w-full p-2 border rounded-md" fdprocessedid="r5pnx">
+                            <option>Automatic (AI-driven)</option>
+                            <option>Manual Control</option>
+                            <option>Peak Hours</option>
+                            <option>Off-Peak Hours</option>
+                        </select>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <h3 class="font-medium mb-2">Signal Timing (seconds)</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm mb-1">Green Light</label>
+                                <input type="number" class="w-full p-2 border rounded-md" value="45" fdprocessedid="m5buys">
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-1">Yellow Light</label>
+                                <input type="number" class="w-full p-2 border rounded-md" value="5" fdprocessedid="9twb6w">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition" fdprocessedid="n6z9co">
+                        Apply Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Traffic Feed -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Live Traffic Feed</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Video Feed -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-medium mb-2">Real-time Camera Feed</h3>
+                    <div class="relative">
+                        <iframe id="trafficVideo" class="w-full h-64 bg-gray-800 rounded-lg" src="https://www.youtube.com/embed/1EiC9bvVGnk?autoplay=1&amp;mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+                        </iframe>
+                        <div class="absolute top-2 right-2 bg-red-500 px-2 py-1 rounded text-white text-sm flex items-center">
+                            <span class="animate-pulse mr-1">●</span> LIVE
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center">
+                        <select class="px-3 py-2 border rounded-lg bg-white" id="cameraSelect" fdprocessedid="q2xwgd">
+                            <option value="KGuCGd726RA">Times Square Camera</option>
+                            <option value="1EiC9bvVGnk">Tokyo Shibuya Crossing</option>
+                            <option value="mZ7X8XKtQbY">London Traffic Camera</option>
+                        </select>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition" fdprocessedid="pfmln">
+                            <i class="fas fa-sync-alt mr-2"></i>Switch View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Traffic Analysis -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-medium mb-2">Real-time Analysis</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm vehicle-detection">
+                            <h4 class="text-sm text-gray-500 mb-1">Vehicle Detection</h4>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold vehicle-count">125 vehicles detected</span>
+                                <span class="text-sm text-red-500 vehicle-change">↓ 3%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full mt-2">
+                                <div class="h-2 bg-blue-600 rounded-full vehicle-progress" style="width: 62.5%;"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm traffic-density">
+                            <h4 class="text-sm text-gray-500 mb-1">Traffic Density</h4>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold density-value">Low</span>
+                                <span class="text-yellow-500 text-sm density-change">← Stable</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full mt-2">
+                                <div class="h-2 bg-green-500 rounded-full density-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm average-speed">
+                            <h4 class="text-sm text-gray-500 mb-1">Average Speed</h4>
+                            <div class="flex items-center justify-between">
+                                <span class="text-lg font-semibold speed-value">40 km/h</span>
+                                <span class="text-sm text-green-500 speed-change">↑ 2%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full mt-2">
+                                <div class="h-2 bg-red-500 rounded-full speed-progress" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traffic Analytics -->
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Traffic Analytics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-medium mb-2">Peak Hours Traffic</h3>
+                    <div class="h-48 bg-gray-200 rounded-lg relative overflow-hidden">
+                        <div class="absolute bottom-0 w-full h-3/4 bg-blue-500 opacity-20"></div>
+                        <div class="absolute bottom-0 w-full">
+                            <div class="flex items-end justify-around h-40">
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 60%"></div>
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 80%"></div>
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 95%"></div>
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 70%"></div>
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 55%"></div>
+                                <div class="w-8 bg-blue-600 rounded-t" style="height: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-medium mb-2">Wait Time Analysis</h3>
+                    <div class="h-48 bg-gray-200 rounded-lg relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-32 h-32 rounded-full border-8 border-blue-600 border-t-transparent animate-spin"></div>
+                            <div class="absolute text-center">
+                                <div class="text-2xl font-bold">45s</div>
+                                <div class="text-sm text-gray-500">Avg. Wait</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle camera switching
+        document.getElementById('cameraSelect').addEventListener('change', function(e) {
+            const iframe = document.getElementById('trafficVideo');
+            const videoId = e.target.value;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+            updateAnalytics(); // Update analytics when camera changes
+        });
+
+        // Handle switch view button
+        document.querySelector('button').addEventListener('click', function() {
+            const select = document.getElementById('cameraSelect');
+            const currentIndex = select.selectedIndex;
+            const nextIndex = (currentIndex + 1) % select.options.length;
+            select.selectedIndex = nextIndex;
+            select.dispatchEvent(new Event('change'));
+        });
+
+        // Update real-time analysis
+        function updateAnalytics() {
+            // Simulate vehicle detection
+            const vehicles = Math.floor(Math.random() * 50) + 100;
+            const vehicleChange = Math.floor(Math.random() * 20) - 10;
+            document.querySelector('.vehicle-count').textContent = `${vehicles} vehicles detected`;
+            const vehicleChangeEl = document.querySelector('.vehicle-change');
+            vehicleChangeEl.textContent = `${vehicleChange >= 0 ? '↑' : '↓'} ${Math.abs(vehicleChange)}%`;
+            vehicleChangeEl.className = `text-sm ${vehicleChange >= 0 ? 'text-green-500' : 'text-red-500'} vehicle-change`;
+            document.querySelector('.vehicle-progress').style.width = `${Math.min(vehicles / 2, 100)}%`;
+
+            // Simulate traffic density
+            const density = ['Low', 'Medium', 'High'][Math.floor(Math.random() * 3)];
+            const densityColors = { Low: 'green', Medium: 'yellow', High: 'red' };
+            document.querySelector('.density-value').textContent = density;
+            document.querySelector('.density-progress').className = `h-2 bg-${densityColors[density]}-500 rounded-full density-progress`;
+
+            // Simulate average speed
+            const speed = Math.floor(Math.random() * 30) + 30;
+            const speedChange = Math.floor(Math.random() * 16) - 8;
+            document.querySelector('.speed-value').textContent = `${speed} km/h`;
+            const speedChangeEl = document.querySelector('.speed-change');
+            speedChangeEl.textContent = `${speedChange >= 0 ? '↑' : '↓'} ${Math.abs(speedChange)}%`;
+            speedChangeEl.className = `text-sm ${speedChange >= 0 ? 'text-green-500' : 'text-red-500'} speed-change`;
+            document.querySelector('.speed-progress').style.width = `${speed}%`;
+        }
+
+        // Update analytics every 5 seconds
+        setInterval(updateAnalytics, 5000);
+        updateAnalytics(); // Initial update
+
+        // Simulated real-time updates
+        function updateStats() {
+            const currentTraffic = Math.floor(Math.random() * 200) + 700;
+            const waitTime = (Math.random() * 2 + 1).toFixed(1);
+            const fuelSaved = Math.floor(Math.random() * 50) + 100;
+            const emissionsReduced = Math.floor(Math.random() * 20) + 30;
+
+            // Update statistics using data attributes
+            const stats = {
+                'current-traffic': `${currentTraffic} vehicles`,
+                'wait-time': `${waitTime} mins`,
+                'fuel-saved': `${fuelSaved} L/hour`,
+                'emissions': `${emissionsReduced} kg CO₂`
+            };
+
+            // Update each stat
+            Object.entries(stats).forEach(([key, value]) => {
+                const statElement = document.querySelector(`[data-stat="${key}"]`);
+                if (statElement) {
+                    statElement.textContent = value;
+                }
+            });
+        }
+
+        // Update stats every 5 seconds
+        setInterval(updateStats, 5000);
+        updateStats(); // Initial update
+
+        // Traffic light simulation
+        function simulateTrafficLights() {
+            const signals = ['North', 'East', 'South'];
+            let currentSignal = 0;
+
+            function updateSignals() {
+                signals.forEach((signal, index) => {
+                    const signalElements = document.querySelectorAll('p');
+                    let signalElement = null;
+                    
+                    // Find the correct signal element
+                    signalElements.forEach(element => {
+                        if (element.textContent.includes(`${signal} Signal`)) {
+                            signalElement = element.closest('.rounded-lg');
+                        }
+                    });
+
+                    if (signalElement) {
+                        if (index === currentSignal) {
+                            signalElement.style.backgroundColor = '#22c55e'; // green
+                        } else {
+                            signalElement.style.backgroundColor = '#ef4444'; // red
+                        }
+                    }
+                });
+                currentSignal = (currentSignal + 1) % signals.length;
+            }
+
+            // Update traffic lights every 10 seconds
+            setInterval(updateSignals, 10000);
+            updateSignals(); // Initial update
+        }
+
+        // Start traffic light simulation
+        simulateTrafficLights();
+    </script>
+
+
+<iframe src="https://codesandbox.io/p/devtool/inline-preview/qcd4n2-8000" style="visibility: hidden; position: fixed; left: -1e+09px;"></iframe><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
